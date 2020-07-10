@@ -1,6 +1,9 @@
 carouselImages = [];
 carouselImages.push("./img/java_code_snippet.jpg");
 carouselImages.push("./img/pug.jpg");
+carouselText = [];
+carouselText.push("Programming Projects");
+carouselText.push("cute dog");
 
 var curCarouselIndex = 0;
 
@@ -19,6 +22,8 @@ function startCarousel()
         carousel_indicators.appendChild(indicator);
     }
     updateCarousel();
+    //auto advance through the carousel
+    setInterval(moveCarouselRight, 10000);
 }
 
 //cycles carousel to the left
@@ -68,8 +73,8 @@ function moveCarousel(index)
 //updates the carousel image and circle location
 function updateCarousel()
 {
-    var imgTag = document.getElementById("imgTag");
-    imgTag.src = carouselImages[curCarouselIndex];
+    document.getElementById("imgTag").src = carouselImages[curCarouselIndex];
+    document.getElementById("carousel_text").innerHTML = carouselText[curCarouselIndex];
     fillCircle(curCarouselIndex);
 }
 
