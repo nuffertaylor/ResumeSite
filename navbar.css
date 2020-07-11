@@ -1,0 +1,37 @@
+ul.navbar
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li.nav_item
+{
+    float: left;
+    user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+}
+
+li.nav_item a
+{
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 1.5vw;
+  text-decoration: none;
+}
+
+li.nav_item a:hover:not(.active) 
+{
+    background-color: #ddd;
+}
+  
+li.nav_item a.active 
+{
+    color: white;
+    background-color: #2e87e6;/*#daaeae;*/
+}

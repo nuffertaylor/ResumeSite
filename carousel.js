@@ -1,11 +1,15 @@
 carouselImages = [];
+carouselImages.push("./img/dino.jpg");
 carouselImages.push("./img/java_code_snippet.jpg");
 carouselImages.push("./img/pug.jpg");
 carouselText = [];
-carouselText.push("Programming Projects");
+carouselText.push("quotosaurus");
+carouselText.push("other programming");
 carouselText.push("cute dog");
 
 var curCarouselIndex = 0;
+
+var autoAdvance = null;
 
 //called at the start of the page to run the carousel
 function startCarousel()
@@ -19,11 +23,10 @@ function startCarousel()
         indicator.index = i;
         indicator.classList.add("far");
         indicator.classList.add("fa-circle");
+        indicator.classList.add("circle_size");
         carousel_indicators.appendChild(indicator);
     }
     updateCarousel();
-    //auto advance through the carousel
-    setInterval(moveCarouselRight, 10000);
 }
 
 //cycles carousel to the left
@@ -76,6 +79,11 @@ function updateCarousel()
     document.getElementById("imgTag").src = carouselImages[curCarouselIndex];
     document.getElementById("carousel_text").innerHTML = carouselText[curCarouselIndex];
     fillCircle(curCarouselIndex);
+    
+    //clear the interval so it won't advance again right after we've clicked it
+    if (autoAdvance != null) clearInterval(autoAdvance);
+    //auto advance through the carousel every 10sec
+    autoAdvance = setInterval(moveCarouselRight, 10000);
 }
 
 function fillCircle(index)

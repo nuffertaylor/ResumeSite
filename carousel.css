@@ -1,8 +1,3 @@
-body
-{
-    background-color: #e4e3db;
-}
-
 .container
 {
     position: relative;
@@ -14,7 +9,7 @@ body
     bottom: 0;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1;
+    color: #8b8585;
     width: 85vw;
     opacity:1;
     color: white;
@@ -25,33 +20,37 @@ body
 
 .carousel
 {
-    width: 95%;
+    width: 100%;
     min-width: 65vw;
-    height: 25vw;
+    height: 40vw;
     text-align: center;
 }
 
 .carousel_interior
 {
-    width: 85%;
+    width: 90%;
     min-width:55vw;
     overflow: hidden;
-    height:20vw;
+    height:35vw;
     display: inline-block;
     padding-top: 2vw;
 }
 
 .carousel_interior img
 {
-    max-width: 85vw;
+    max-width: 90vw;
+}
 
+.circle_size
+{
+    font-size: 2vw;
 }
 
 .arrow
 {
     font-size: xx-large;
     position: absolute;
-    top: 10vw;
+    top: 15vw;
 }
 
 .arrow:hover
