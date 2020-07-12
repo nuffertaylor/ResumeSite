@@ -1,4 +1,4 @@
-ul.navbar
+.navbar
 {
     list-style-type: none;
     margin: 0;
@@ -6,6 +6,19 @@ ul.navbar
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f3f3f3;
+    z-index: 5;
+}
+
+#navbar
+{
+    z-index: 5;
+}
+
+.sticky 
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 li.nav_item

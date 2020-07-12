@@ -34,13 +34,9 @@ function moveCarouselLeft()
 {
     emptyCircle(curCarouselIndex);
     if (curCarouselIndex == 0)
-    {
         curCarouselIndex = carouselImages.length - 1;
-    }
     else
-    {
         curCarouselIndex = curCarouselIndex - 1;
-    }
     updateCarousel();
 }
 
@@ -49,13 +45,9 @@ function moveCarouselRight()
 {
     emptyCircle(curCarouselIndex);
     if (curCarouselIndex == carouselImages.length - 1)
-    {
         curCarouselIndex = 0;
-    }
     else
-    {
         curCarouselIndex = curCarouselIndex + 1;
-    }
     updateCarousel();
 }
 

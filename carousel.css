@@ -24,6 +24,7 @@
     min-width: 65vw;
     height: 40vw;
     text-align: center;
+    z-index: 1;
 }
 
 .carousel_interior
@@ -62,7 +63,6 @@
 {
     opacity: 50%;
 }
-
 
 #left_arrow
 {
