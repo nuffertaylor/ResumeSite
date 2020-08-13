@@ -1,111 +1,64 @@
 <!DOCTYPE html>
+<html>
+	<head>
+	  <script src="main.js"></script>
+	  <link rel="stylesheet" type="text/css" href="main.css">
+	  <title>taylorjonas.com :)</title>
+	  <link rel="icon" href="elephant.svg">
+	  <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik from www.flaticon.com-->
+	</head>
+	<body onload="setTimeout(startPage, 7000)">
+	  <div class="welcome">welcome</div>
+	  <div class="header">
+		<div class="navItem" id="header-title">taylor jonas</div>
+		<div class="navItem item" id="item1" onclick="selectTab(1)">about</div>
+		<div class="navItem item" id="item2" onclick="selectTab(2)">projects</div>
+		<div class="navItem item" id="item3" onclick="selectTab(3)">links</div>
+	  </div>
+	  <div class="page">
+		<div class="about hide" id="page1">
+		  <div class="img"></div>
+		  <p>hey there! my name's taylor.  i'm an avid something or other.</p>
+		<p>i'll be graduating from byu in dec 2021 with a degree in computer science and a minor in english.</p>
+		</div>
+		<div class="projects hide" id="page2">
+		  <p><a href="https://twitter.com/Quotosaurus1" class="link">quotosaurus twitter bot</a></p>
+		<ul>
+		  <li>pulls from a repository of quotes</li>
+		  <li>ensures the bot hasn't posted that quote before</li>
+		  <li>if the quote is longer than the max tweet length, splits into multiple tweets</li>
+		  <li>written in java</li>
+		</ul>
 
-<html lang="en">
+		<p>Twitter Clone</p>
+		<ul>
+		  <li>Android App that's literally a clone of twitter</li>
+		  <li>Allows the creation of users, following, posting statuses, and more</li>
+		  <li>backend built using AWS services such as DynamoDB, Lambda, and API Gateway</li>
+		  <li>written in java</li>
+		</ul>
 
-<head>
-  <title>taylorjonas.com :)</title>
-  <script src="carousel.js"></script>
-  <script src="navbar.js"></script>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="carousel.css">
-  <link rel="stylesheet" type="text/css" href="navbar.css">
-  <script src="https://kit.fontawesome.com/775768a85b.js" crossorigin="anonymous"></script>
-</head>
+		<p><a href="/sacredGroveExp" class="link">sacred grove experience</a></p>
+		<ul>
+		  <li>interactive website that allows you to click on sections of historical text to get context, quotes, and images relating to text clicked on</li>
+		  <li>designed for phones, to see the effect shrink your browser window or use a phone</li>
+		  <li>written in angularjs</li>
+		</ul>
 
-<body onload="startCarousel()">
-  <a name="home"></a>
-  <!--Navbar-->
-  <nav id="navbar">
-    <ul class="navbar">
-      <li class="nav_item"><a href="#home" class="active">taylor jonas</a></li>
-      <li class="nav_item"><a href="#about">about</a></li>
-      <li class="nav_item"><a href="#projects">projects</a></li>
-      <li class="nav_item"><a href="#experience">experience</a></li>
-      <li class="nav_item"><a href="#links">links</a></li>
-    </ul>
-  </nav>
-
-  <br>
-  <!--TODO:
-  make navbar update as you traverse the page
-  page starts slightly scrolled, fix
-  when you click on "about", the navbar covers about, but only on the first click, not the second
-  -->
-
-  <!--Main Page-->
-
-  <!--Carousel (just because, yaknow?)-->
-  <div id="page_wrapper">
-    <div class="carousel container">
-      <div id="carousel_exterior">
-        <div class="carousel_interior container">
-          <img id = "imgTag">
-          <div class="overlay" id="carousel_text"></div>
-        </div>
-        <div id="left_arrow" class = "arrow xxlarge_font" onclick="moveCarouselLeft()">
-          <i class="fas fa-arrow-left" id="left_arrow"></i>
-        </div>
-        <div id="right_arrow" class = "arrow xxlarge_font" onclick="moveCarouselRight()">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <div id="carousel_indicators"></div>
-      </div>
-    </div>
-  </div>
-
-  <main>
-    <h1><a name="about">about</a></h1>
-    <p>hey what's good! my name is taylor jonas, i'm an avid something or other.</p>
-    <p>i'll be graduating from byu in dec 2021 with a degree in computer science and a minor in english</p>
-
-    <h1><a name="projects">projects</a></h1>
-
-    <p><a href="https://twitter.com/Quotosaurus1" class="link">quotosaurus twitter bot</a></p>
-    <ul>
-      <li>pulls from a repository of quotes</li>
-      <li>ensures the bot hasn't posted that quote before</li>
-      <li>if the quote is longer than the max tweet length, splits into multiple tweets</li>
-      <li>written in java</li>
-    </ul>
-
-    <p>Twitter Clone</p>
-    <ul>
-      <li>Android App that's literally a clone of twitter</li>
-      <li>Allows the creation of users, following, posting statuses, and more</li>
-      <li>backend built using AWS services such as DynamoDB, Lambda, and API Gateway</li>
-      <li>written in java</li>
-    </ul>
-
-    <p><a href="/sacredGroveExp" class="link">sacred grove experience</a></p>
-    <ul>
-      <li>interactive website that allows you to click on sections of historical text to get context, quotes, and images relating to text clicked on</li>
-      <li>designed for phones, to see the effect shrink your browser window or use a phone</li>
-      <li>written in angularjs</li>
-    </ul>
-
-    <p><a href="/adoptionSearch" class="link">textbook inventory/audit system</a></p>
-    <ul>
-      <li>use to expedite sorting of shelves and fulfillment of online orders</li>
-      <li>used at the text information desk of the byu store</li>
-      <li>written in javascript</li>
-    </ul>
-    
-    <p>hacker game</p>
-
-    <p><a href="/connect4" class="link">connect 4</a></p>
-    <ul>
-      <li>one of my first projects</li>
-      <li>really really bad</li>
-      <li>written in javascript</li>
-    </ul>
-
-    <h1><a name="experience">experience</a></h1>
-
-    <h1><a name="links">links</a></h1>
-    <a href="www.linkedin.com/in/nuffertaylor" class="link">linkedin</a>
-    <br>
-    <a href="https://github.com/nuffertaylor" class="link">github</a>
-  </main>
-</body>
-
+		<p><a href="/adoptionSearch" class="link">textbook inventory/audit system</a></p>
+		<ul>
+		  <li>use to expedite sorting of shelves and fulfillment of online orders</li>
+		  <li>used at the text information desk of the byu store</li>
+		  <li>written in javascript</li>
+		</ul>
+		</div>
+		<div class="links hide" id="page3">
+		  <a href="https://linkedin.com/in/nuffertaylor" class="link">linkedin</a>
+		  <br>
+		  <a href="https://github.com/nuffertaylor" class="link">github</a>
+		  <br>
+		  <a href="https://codepen.io/nuffertaylor" class="link">codepen</a>
+		</div>
+	  </div>
+	</body>
 </html>

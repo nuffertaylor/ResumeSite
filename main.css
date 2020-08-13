@@ -1,21 +1,106 @@
-html
-{
-    background-color: #e4e3db;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    scroll-padding-top: 5vw;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+body {
+  background: #5fdde5;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px #00a1ab;
+  padding: 10px;
 }
 
-#page_wrapper
-{
-    padding: 16px;
+.welcome {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  animation: fade-in-out 4s ease-in-out;
+  user-select: none;
 }
 
-.link
-{
-    color: #2e87e6;
-	text-decoration: none;
-	padding-bottom: 3px;
-	border-bottom: 1px solid #2e87e6;
+.header {
+  padding-left: 15px;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.header .navItem {
+  flex: 1 3 auto;
+  user-select: none;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+}
+.header .item {
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.header .item:hover {
+  transform: scale(1.2);
+  text-shadow: 4px 4px 4px #00a1ab;
+}
+.header .item:active {
+  transform: scale(1.1);
+}
+.header #header-title {
+  animation-delay: 3s;
+}
+.header #item1 {
+  animation-delay: 3.5s;
+}
+.header #item2 {
+  animation-delay: 4.5s;
+}
+.header #item3 {
+  animation-delay: 5s;
+}
+.header .selected {
+  font-weight: 600;
+}
+
+.page {
+  position: absolute;
+  top: 50px;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  background-size: 200px;
+  border-radius: 10px;
+  float: right;
+  background-image: url("http://taylorjonas.com/img/face.jpg");
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in-out {
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
